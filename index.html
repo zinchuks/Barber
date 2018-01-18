@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Quattrocento+Sans:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Spectral:400,700,800" rel="stylesheet">
+    <script src="https://use.fontawesome.com/041d9d63ba.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/slick.css">
+    <link rel="stylesheet" href="css/jquery.formstyler.css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Barber</title>    
+    <style>
+    .preloader {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background: #fff;
+        z-index: 9999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all .5s ease;
+        transform-origin: 0 0;
+    }
+
+    .preloader.done {
+        transform: scaleY(0);
+    }
+
+    .preloader p {
+        text-align: center;
+        font-size: 30px;
+        color: #e9696a;
+        position: relative;
+        font-family: 'Trebuchet MS', Helvetica, sans-serif;
+    }
+    .preloader p:before{
+        content: '';
+        position: absolute;
+        background: url(img/barber.png);
+        background-position: -108px -443px;
+        font-size: 30px;
+        height: 80px;
+        width: 80px;
+        left: 50%;
+        transform: translate(-50%, -125%) rotate(0deg);
+        animation: preloader-rotate 5s linear infinite;
+    }
+
+    @keyframes preloader-rotate {
+        100% {
+            transform: translate(-50%, -125%) rotate(360deg);
+        }
+    }
+    </style>
+</head>
+
+<body>    
+    <div id="preloader" class="preloader">
+        <p>Loading...</p>
+    </div>
+    <header class="header">
+        <div class="container">
+            <div class="row header-row">
+                <div class="col-xs-12 col-lg-2 col-lg-offset-0 col-md-12 col-sm-12 logo-position">
+                    <a href="#" class="logo">Barber</a>
+                </div>
+                <div class="col-xs-12 col-sm-3 col-sm-offset-0 col-lg-3 col-lg-offset-0 header-contact tel-contact">
+                    <i class="fa fa-phone" aria-hidden="true"></i>
+                    <a href="tel:1-800-00-000-0000">1-800-00-000-0000</a>
+                    <a href="tel:1-800-00-000-0000">1-800-00-000-0000</a>
+                </div>
+                <div class="col-xs-12 col-md-4 col-sm-4 col-lg-3 header-contact location" data-toggle="modal" data-target=".modal-map">
+                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                    <p>11301 West Olympic Boulevard</p>
+                    <p>New Yourk, USA</p>
+                </div>
+                <div class="col-xs-12 col-sm-2 header-contact">
+                    <i class="fa fa-clock-o" aria-hidden="true"></i>
+                    <p>Mon - Fri</p>
+                    <p>9.00 - 18.00</p>
+                </div>
+                <div class="col-xs-12 col-md-12 col-lg-2 col-sm-12">
+                    <form action="#" class="header-search">
+                        <label class="fa fa-search" aria-hidden="true">
+                            <input class="search" type="text" placeholder="Search">
+                        </label>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="greeting">
+        <div class="menu-wrap">
+            <nav class="navbar navbar-default menu">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu1" aria-expanded="false">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse" id="menu1">
+                    <ul class="nav navbar-nav nav-menu">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#our-services">Servises</a></li>
+                        <li><a href="#barber">Barbers</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#gallery">Portfolio</a></li>
+                        <li><a href="#pricing">Prices</a></li>
+                        <li><a href="#contact">Contacts</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div class="banner">
+            <div class="container">
+                <div class="banner-slider">
+                    <div>
+                        <div class="row">
+                            <div class="col-xs-7 col-sm-5 col-md-offset-1 col-lg-offset-0 banner-text">
+                                <h1 class="welcome">Welcome to the <span>barbershop</span></h1>
+                                <a class="meeting-btm" href="#contact">Make An Appointment</a>
+                                <img src="img/bg-greeting.jpg">
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="row">
+                            <div class="col-xs-7 col-sm-5 col-md-offset-1 col-lg-offset-0 banner-text">
+                                <h1 class="welcome">Welcome to the <span>barbershop</span></h1>
+                                <a class="meeting-btm" href="#contact">Make An Appointment</a>
+                                <img src="img/bg-greeting.jpg">
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="row">
+                            <div class="col-xs-7 col-sm-5 col-md-offset-1 col-lg-offset-0 banner-text">
+                                <h1 class="welcome">Welcome to the <span>barbershop</span></h1>
+                                <a class="meeting-btm" href="#contact">Make An Appointment</a>
+                                <img src="img/bg-greeting.jpg">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="about-us scroll-shows">
+        <div class="container">
+            <div class="col-xs-12 col-xs-offset-0 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 col-sm-10 col-sm-offset-1 center-heading">
+                <h2 id="about">About us</h2>
+                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam
+                </p>
+            </div>
+            <div class="row">
+                <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-0 col-md-4 ">
+                    <div class="service razor">
+                        <h2>New Yourk’s №1 Barbershop</h2>
+                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+                    </div>
+                </div>
+                <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-0 col-md-4 ">
+                    <div class="service scissors">
+                        <h2>Profeccionals Barbers</h2>
+                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+                    </div>
+                </div>
+                <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-0 ">
+                    <div class="service set">
+                        <h2>Branded Products</h2>
+                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="about-clients scroll-shows">
+        <div class="container">
+            <div class="col-xs-12 col-md-3 col-sm-3 clients">
+                <h2>2500</h2>
+                <p>happy clients</p>
+            </div>
+            <div class="col-xs-12 col-md-3 col-sm-3 clients">
+                <h2>300</h2>
+                <p>coffee cups</p>
+            </div>
+            <div class="col-xs-12 col-md-3 col-sm-3 clients">
+                <h2>120</h2>
+                <p>barbers</p>
+            </div>
+            <div class="col-xs-12 col-md-3 col-sm-3 clients">
+                <h2>30</h2>
+                <p>stores</p>
+            </div>
+        </div>
+    </div>
+    <div class="services scroll-shows">
+        <div class="container services-man-bg">
+            <div class="row">
+                <div class="col-xs-12 col-xs-offset-0 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 col-sm-10 col-sm-offset-1 center-heading services-padding">
+                    <h2 id="our-services">Our services</h2>
+                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam</p>
+                </div>
+            </div>
+            <div class="services-top">
+                <div class="hair hair-cut">
+                    <h2>Hair cut</h2>
+                    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos </p>
+                </div>
+                <div class="hair-right hair-styling">
+                    <h2>Hair styling</h2>
+                    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos </p>
+                </div>
+            </div>
+            <div class="services-bottom">
+                <div class="hair hair-wash">
+                    <h2>Hair wash</h2>
+                    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos </p>
+                </div>
+                <div class="hair-right shave">
+                    <h2>Shave</h2>
+                    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="entry scroll-shows">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-xs-offset-0 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 col-sm-10 col-sm-offset-1 center-heading appointment">
+                    <h2 id="contact">Make an appointment</h2>
+                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam</p>
+                </div>
+                <div class="col-xs-12 col-xs-offset-0 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 col-sm-10 col-sm-offset-1">
+                    <form action="#" class="entry-form">
+                        <div class="row entry-row">
+                            <div class="col-xs-12 col-sm-6">
+                                <input class="entry-input" type="text" required placeholder="Name">
+                                <input class="entry-input" type="tel" name="tel" placeholder="Phone">
+                                <input class="entry-input" type="email" required placeholder="E-mail">
+                            </div>
+                            <div class="col-xs-12 col-sm-6">
+                                <select class="entry-select">
+                                    <option></option>
+                                    <option>Hair cut</option>
+                                    <option>Hair styling</option>
+                                    <option>Hair wash</option>
+                                    <option>Shave</option>
+                                </select>
+                                <select class="barber-selection">
+                                    <option></option>
+                                    <option>Darrell Gibbs</option>
+                                    <option>David Clarke</option>
+                                    <option>Richard Owens</option>
+                                </select>
+                                <input class="entry-select" type="text" id="datepicker" placeholder="Date">
+                            </div>
+                            <div class="col-xs-12 ">
+                                <textarea class="message" name="comment" placeholder="Message"></textarea>
+                                <input class="meeting-btm" type="submit" value="Make An Appointment" />
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="our-barbers scroll-shows">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-xs-offset-0 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 col-sm-10 col-sm-offset-1 center-heading barbers">
+                    <h2 id="barber">Our barbers</h2>
+                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-lg-4 mans">
+                    <img src="img/our-barbers1.jpg" class="img-responsive" alt="barber Darrell Gibbs">
+                    <h2>Darrell Gibbs</h2>
+                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium </p>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-lg-4 mans">
+                    <img src="img/our-barbers2.jpg" class="img-responsive" alt="barber David Clarke">
+                    <h2>David Clarke</h2>
+                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium </p>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-sm-offset-3 col-lg-4 col-lg-offset-0 mans">
+                    <img src="img/our-barbers3.jpg" class="img-responsive" alt="barber Richard Owens">
+                    <h2>Richard Owens</h2>
+                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="our-clients scroll-shows">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-xs-offset-0 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 col-sm-10 col-sm-offset-1 center-heading">
+                    <h2 id="testimonials">Our clients say</h2>
+                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam</p>
+                </div>
+            </div>
+            <div class="clients-slider">
+                <div>
+                    <div class="row">
+                        <div class="col-xs-8 col-xs-offset-2 col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 banner-text">
+                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque l audantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, </p>
+                            <img src="img/coment-img.jpg" alt="coment" class="img-circle">
+                            <h3>George Morgan</h3>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="row">
+                        <div class="col-xs-8 col-xs-offset-2 col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 banner-text">
+                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque l audantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, </p>
+                            <img src="img/coment-img.jpg" alt="coment" class="img-circle">
+                            <h3>George Morgan</h3>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="row">
+                        <div class="col-xs-8 col-xs-offset-2 col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 banner-text">
+                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque l audantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, </p>
+                            <img src="img/coment-img.jpg" alt="coment" class="img-circle">
+                            <h3>George Morgan</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="our-gallery scroll-shows">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-xs-offset-0 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 col-sm-10 col-sm-offset-1 center-heading galleries">
+                    <h2 id="gallery">Our gallery</h2>
+                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam</p>
+                </div>
+            </div>
+        </div>
+        <div class="gallery-photos scroll-shows">
+            <div class="gallery scroll-shows"><img src="img/1.jpg" class="img-responsive" alt="gallery fotos"></div>
+            <div class="gallery scroll-shows"><img src="img/2.jpg" class="img-responsive" alt="gallery fotos"></div>
+            <div class="gallery scroll-shows"><img src="img/3.jpg" class="img-responsive" alt="gallery fotos"></div>
+            <div class="gallery scroll-shows"><img src="img/4.jpg" class="img-responsive" alt="gallery fotos"></div>
+            <div class="gallery scroll-shows"><img src="img/5.jpg" class="img-responsive" alt="gallery fotos"></div>
+            <div class="gallery scroll-shows"><img src="img/6.jpg" class="img-responsive" alt="gallery fotos"></div>
+            <div class="gallery scroll-shows"><img src="img/7.jpg" class="img-responsive" alt="gallery fotos"></div>
+            <div class="gallery scroll-shows"><img src="img/8.jpg" class="img-responsive" alt="gallery fotos"></div>
+            <div class="gallery scroll-shows"><img src="img/9.jpg" class="img-responsive" alt="gallery fotos"></div>
+            <div class="gallery scroll-shows"><img src="img/10.jpg" class="img-responsive" alt="gallery fotos"></div>
+        </div>
+    </div>
+    <div class="our-pricing scroll-shows">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-xs-offset-0 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 col-sm-10 col-sm-offset-1 center-heading pricings">
+                    <h2 id="pricing">Our pricing</h2>
+                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam</p>
+                </div>
+            </div>
+            <div class="row price">
+                <div class="col-xs-12 col-xs-offset-0 col-md-5 col-md-offset-1 col-lg-4 col-lg-offset-2 col-sm-6 col-sm-offset-0  pricelist">
+                    <h2>Man</h2>
+                    <div class="pricelist-text">
+                        <p>Hair cut<span>15$</span></p>
+                        <p>Hair wash<span>12$</span></p>
+                        <p>Hair styling<span>20$</span></p>
+                        <p>Face shave<span>15$</span></p>
+                        <p>Head shave<span>15$</span></p>
+                        <p>Head shave<span>15$</span></p>
+                    </div>
+                    <a class="price-btn" href="#contact">Appointment</a>
+                </div>
+                <div class="col-xs-12 col-md-5 col-lg-4 col-sm-6 pricelist">
+                    <h2>Women</h2>
+                    <div class="pricelist-text">
+                        <p>Hair cut<span>20$</span></p>
+                        <p>Hair wash<span>12$</span></p>
+                        <p>Hair styling<span>30$</span></p>
+                        <p>Hair color<span>45$</span></p>
+                        <p>Styling & Color<span>60$</span></p>
+                        <p>Styling & Hair cut<span>45$</span></p>
+                    </div>
+                    <a class="price-btn" href="#contact">Appointment</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="other-information scroll-shows">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-lg-3 col-md-12 col-sm-12 subscribe">
+                    <h2>Subscribe</h2>
+                    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis.</p>
+                    <form class="form-group subscribe-form">
+                        <div class="input-group">
+                            <input class="form-control subscribe-email" type="email" placeholder="Your E-mail">
+                            <span class="input-group-addon">
+                                <button type="submit" class="fa fa-paper-plane subscribe-btn" aria-hidden="true"></button>
+                            </span>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-xs-8 col-xs-offset-2 col-lg-3 col-lg-offset-0 col-md-4 col-md-offset-1 col-sm-4 col-sm-offset-1 hours">
+                    <h2>Working hours</h2>
+                    <div class="week">
+                        <p>Mon<span>9.00 - 18.00</span></p>
+                        <p>Tue<span>9.00 - 18.00</span></p>
+                        <p>Wed<span>9.00 - 18.00</span></p>
+                        <p>Thu<span>9.00 - 18.00</span></p>
+                        <p>Fri<span>9.00 - 16.00</span></p>
+                        <p>Sat<span>10.00 - 14.00</span></p>
+                        <p>Sun<span>Output</span></p>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-3">
+                    <h2>latest from blog</h2>
+                    <div class="blog">
+                        <h2>Lorem ipsum dolor</h2>
+                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium...
+                        </p>
+                    </div>
+                    <div class="blog">
+                        <h2>Lorem ipsum dolor</h2>
+                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque...</p>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-3 instagram">
+                    <h2>Instagram</h2>
+                    <div class="row instagram-foto-top">
+                        <div class="col-xs-4">
+                            <a href="#"><img src="img/instagram-1.jpg" alt="insagram"></a>
+                        </div>
+                        <div class="col-xs-4">
+                            <a href="#"><img src="img/instagram-2.jpg" alt="insagram"></a>
+                        </div>
+                        <div class="col-xs-4">
+                            <a href="#"><img src="img/instagram-3.jpg" alt="insagram"></a>
+                        </div>
+                        <div class="col-xs-4">
+                            <a href="#"><img src="img/instagram-4.jpg" alt="insagram"></a>
+                        </div>
+                        <div class="col-xs-4">
+                            <a href="#"><img src="img/instagram-5.jpg" alt="insagram"></a>
+                        </div>
+                        <div class="col-xs-4">
+                            <a href="#"><img src="img/instagram-6.jpg" alt="insagram"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="container">
+            <div class="footer-container">
+                <p>Copyright &#169; 2017 Barber. All rights reserved</p>
+                <ul class="social">
+                    <li>
+                        <a class="fa fa-google-plus social-icon" aria-hidden="true" href="#"></a>
+                    </li>
+                    <li>
+                        <a class="fa fa-twitter social-icon" aria-hidden="true" href="#"></a>
+                    </li>
+                    <li>
+                        <a class="fa fa-instagram social-icon" aria-hidden="true" href="#"></a>
+                    </li>
+                    <li>
+                        <a class="fa fa-facebook social-icon" aria-hidden="true" href="#"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade modal-map" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Our location</h4>
+                </div>
+                <div class="modal-body">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3021.3149845438443!2d-73.71477398469285!3d40.77708887932487!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c289b78ec6f1a5%3A0x8ded6fa4bf0f20fc!2zV2lsc2hpcmUgRHIsIExha2UgU3VjY2VzcywgTlksINCh0KjQkA!5e0!3m2!1sru!2sua!4v1498499512990" width="800" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/jquery.formstyler.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+    document.body.onload = function() {
+        setTimeout(function() {
+            var preloader = document.getElementById("preloader");
+            if (!preloader.classList.contains("done")) {
+                preloader.classList.add("done");
+            }
+        }, 1000);
+    };
+    </script>
+</body>
+
+</html>
