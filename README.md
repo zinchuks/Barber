@@ -1,2 +1,2 @@
 # Barber
-My train website
+My train responsive website
